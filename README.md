@@ -1,77 +1,59 @@
-# DREU Research Log
+# DREU Summer 2026: Buckaroo + AI Assistant
+Mentor: Dr. Paul Rosen at the University of Utah
+Student: Marianne Martinez (University of Hawaii at Hilo & University of Utah)
 
-**Student:** Your Full Name  
-**Mentor:** Mentor Full Name  
+## Project Overview
 
-This repository contains your weekly research log for the Distributed Research Experiences for Undergraduates (DREU) program. It covers 10 weeks. All 10 log files are pre-created — you fill them in week by week.
+Buckaroo is a visual data wrangling 
 
-*Update the Student and Mentor fields above after forking.*
+Though Buckaroo already suggests wrangles to the user, it can be difficult for the user to decide which actions to perform first. Should the user prioritize removing errors from one column or prioritize making sure that all data types are the same in another? There isn't one single right answer to this problem: it depends on what the user's goals are. 
 
-## Repository Structure
+Under the mentorship of Dr. Paul Rosen, I will be incorporating an AI assistant into Buckaroo in order to help the user make wrangling decisions. The AI assistant will be an LLM given information about the user (user goals, user preferences, past user wrangles, etc.), context about the dataset (what the dataset is of, the columns, etc.) and detailed information about the dataset (summary stats, errors, etc.). Using this information, the LLM will create a "wrangling plan" for the user to act on as well as guide them to data points that are interesting.
 
-```
-your-repo/
-├── README.md          ← this file
-├── TEMPLATE.md        ← reference template (do not edit)
-├── EXAMPLE.md         ← filled-out example showing expected quality
-└── logs/
-    ├── week-01.md
-    ├── week-02.md
-    ├── ...
-    └── week-10.md
-```
+### Project Goals
 
-## How to Submit Your Weekly Log
+#### Week 1
+- Get familiar with the code base & with Buckaroo app
+    - Calculate summary stats of the dataset and save them to a json
+        - Research some summary stats
 
-1. Open the current week's file in `logs/` (e.g., `logs/week-03.md`).
-2. Fill in the **Dates** field and all three sections.
-3. Commit and push your changes before the weekly deadline (Sunday 11:59 PM).
+#### Week 2
+- Implement data profile table
+    1. Create more summary statistics using the error stats
+    2. Put the summary stats into a SQL table
 
-You do not need to create new files — all 10 are already in the repo waiting for you.
+- Optimize updating of data profile and errors table
+- Get an idea of what kind of information the LLM might need
 
-## Log Format Requirements
+#### Week 3
+- Fix bugs
+    - Fix deletion bug
+- Transition from pandas df to SQL queries so that the system can be more efficient
+    - Transition data profile class from pandas and SQL to just SQL
+    - Transition error detectors from pandas to just SQL (One implementation already in one of the branches)
+- In-depth literature review
+    - How to prompt the LLM for this task
+    - What data to give the LLM
+- Start implementing unit tests for data profile functions & other modified functions
 
-Each weekly log **must** follow this exact structure for automated validation to pass:
+#### Week 4
+- Start creating user profile(information about the user to give to the LLM)
+- Draft of LLM prompt
+- 
 
-```markdown
-# Week N
+#### Week 5
 
-**Dates:** MM-DD to MM-DD
 
-## Goals
-...
+#### Week 6
+#### Week 7
+#### Week 8
+#### Week 9
+#### Week 10
 
-## Approach and Implementation
-...
+## Relocation Status
 
-## Results
-...
-```
+I have relocated to Salt Lake City and meet with Dr. Rosen at the University of Utah at least once a week. We meet once a week virtually over Zoom also.
 
-The following fields are required and must appear exactly as written:
 
-| Field | Example |
-|---|---|
-| H1 title | `# Week 3` |
-| Dates line | `**Dates:** 06-16 to 06-22` |
-| Section 1 | `## Goals` |
-| Section 2 | `## Approach and Implementation` |
-| Section 3 | `## Results` |
 
-The first three sections are required and must each contain at least one non-empty line of content. A fourth section, `## Notes`, is optional — include it for questions, follow-up items, or anything else that doesn't fit the main sections.
 
-See **EXAMPLE.md** for a complete filled-out sample.
-
-## Checking Your Log
-
-You can validate your own log at any time by running the check script locally:
-
-```bash
-python check_log.py logs/week-NN.md
-```
-
-Or push your changes — if a GitHub Action is configured in this repo, it will automatically validate your latest log and show a pass/fail status on your commit.
-
-## Questions?
-
-Contact the DREU program staff <dreu_staff@cra.org> if you have questions about the format or submission process.
