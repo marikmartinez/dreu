@@ -37,6 +37,7 @@ _Note_: These project goals are not set in stone and will be adjusted and fleshe
 - In-depth literature review
     - How to prompt the LLM for this task
     - What data to give the LLM
+    - How to evaluate how good LLM responses are
 - Start implementing unit tests for data profile functions & other modified functions
 
 #### Week 4
@@ -45,6 +46,8 @@ _Note_: These project goals are not set in stone and will be adjusted and fleshe
     - Figure out how LLM will perform actions
     - Draft format that LLM should respond in
 - Continue to transition error detectors from pandas df to SQL
+    - Merge the improve-error-detectors branch into dreu_ai branch (It's 112 commits behind D:!!!)
+
 
 #### Week 5
 - Start implementing LLM into the system
@@ -54,7 +57,10 @@ _Note_: These project goals are not set in stone and will be adjusted and fleshe
 - Continue to implement LLM into the system
 
 #### Week 7
-- Experiment with different kinds of prompts (based on research)
+- Experiment with different kinds of prompts and information given to LLM (based on research)
+    - Evaluate LLM responses based on quality of the result
+    - Evaluate LLM responses over time
+
 
 #### Week 8
 - Start writing final report
